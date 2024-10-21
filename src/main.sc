@@ -21,3 +21,12 @@ theme: /
     state: Match
         event!: match
         a: {{$context.intent.answer}}
+        
+    state: GetLectureInfo
+    intent!: /лекция (.*)
+    a: Лекция по теме {{request.query}} охватывает следующие темы: инкапсуляция, наследование и полиморфизм.
+    
+    state: GetAllLectures
+    intent!: /какие лекции доступны
+    a: Доступные лекции: ООП, Алгоритмы, Структуры данных, Компьютерные сети. По какой лекции хотите узнать больше?
+
