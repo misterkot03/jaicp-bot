@@ -24,6 +24,7 @@
   },
   "intents" : [ {
     "path" : "/GetLectureInfo",
+    "answer" : "Лекция по теме \"{{ТемаЛекции}}\" охватывает основные темы и примеры. Можете задать дополнительные вопросы.\n",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
@@ -63,7 +64,26 @@
     },
     "priority" : 0
   } ],
-  "entities" : [ ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "ТемаЛекции",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "ООП" ],
+      "value" : ""
+    } ]
+  } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
