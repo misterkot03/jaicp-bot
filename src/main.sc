@@ -1,4 +1,4 @@
-theme: /
+theme:
 
 state: Start
     q!: $regex</start>
