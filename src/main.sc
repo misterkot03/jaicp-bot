@@ -23,8 +23,9 @@ theme: /
         a: {{$context.intent.answer}}
         
     state: GetLectureInfo
-    intent!: /лекция (.*)
-    a: Лекция по теме {{request.query}} охватывает следующие темы: инкапсуляция, наследование и полиморфизм.
+    intent!: /лекция|тема (.*)
+    a: Лекция по теме "{{request.query}}" охватывает следующие темы: инкапсуляция, наследование и полиморфизм.
+
     
     state: GetAllLectures
     intent!: /какие лекции доступны
